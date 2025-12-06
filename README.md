@@ -63,7 +63,7 @@ owlv2-dinov3-open-vocabulary-pipeline/
 │
 ├── examples/
 │   ├── class_images/        # two class reference images
-│   ├── test_images/         # input images to run inference on
+│   ├── output_images/         # output images to show the performance 
 │
 ├── results/                 # auto-generated outputs (JSON, crops, logs)
 │
