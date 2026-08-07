@@ -9,6 +9,24 @@ The pipeline is designed for research workflows in **ecology, agriculture, plant
 
 ---
 
+## Demo results
+
+OWLv2 detects plants in field imagery; DINOv3 patch similarity assigns each box to a reference class (`class1` / `class2`).
+
+![Detection + classification collage](docs/images/demo_collage.jpg)
+
+| Multi-object field result | Sparse seedlings on mulch |
+|:---:|:---:|
+| ![Result with multiple detections](docs/images/result_100009370956.jpg) | ![Result with seedling detections](docs/images/result_100009440963.jpg) |
+
+| Reference `class1` | Reference `class2` |
+|:---:|:---:|
+| ![class1 reference](docs/images/class1.jpg) | ![class2 reference](docs/images/class2.jpg) |
+
+More annotated samples: [`example/output/`](example/output/).
+
+---
+
 ##  Key Features
 
 - **Open-vocabulary OWLv2 detection** using flexible text prompts  
@@ -61,9 +79,11 @@ owlv2-dinov3-open-vocabulary-pipeline/
 │   ├── classification.py    # patch-level zero-shot classifier
 │   ├── utils.py             # NMS, I/O, helper utilities
 │
-├── examples/
+├── example/
 │   ├── class_images/        # two class reference images
-│   ├── output_images/         # output images to show the performance 
+│   └── output/              # annotated demo results (boxes + labels)
+│
+├── docs/images/             # README visuals (collage + featured frames)
 │
 ├── results/                 # auto-generated outputs (JSON, crops, logs)
 │
