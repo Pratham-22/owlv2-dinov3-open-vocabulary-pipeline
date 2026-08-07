@@ -13,17 +13,21 @@ The pipeline is designed for research workflows in **ecology, agriculture, plant
 
 OWLv2 detects plants in field imagery; DINOv3 patch similarity assigns each box to a reference class (`class1` / `class2`).
 
-![Detection + classification collage](docs/images/demo_collage.jpg)
+Full frames are wide aerial shots, so README visuals are **zoomed crops around each detection** (object fills the tile):
 
-| Multi-object field result | Sparse seedlings on mulch |
+![Zoomed detections collage](docs/images/demo_collage.jpg)
+
+| `class2` close-ups | `class2` / mixed close-ups |
 |:---:|:---:|
-| ![Result with multiple detections](docs/images/result_100009370956.jpg) | ![Result with seedling detections](docs/images/result_100009440963.jpg) |
+| ![Zoomed class2 detections](docs/images/result_100009440963.jpg) | ![Zoomed mixed detections](docs/images/result_100009370956.jpg) |
+
+![Per-object zoom strip](docs/images/zoom_object_grid.jpg)
 
 | Reference `class1` | Reference `class2` |
 |:---:|:---:|
 | ![class1 reference](docs/images/class1.jpg) | ![class2 reference](docs/images/class2.jpg) |
 
-More annotated samples: [`example/output/`](example/output/).
+More zoomed samples: [`example/output/`](example/output/).
 
 ---
 
