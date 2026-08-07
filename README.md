@@ -29,6 +29,16 @@ Full frames are wide aerial shots, so README visuals are **zoomed crops around e
 
 More zoomed samples: [`example/output/`](example/output/).
 
+### DINOv3 region matching (patch similarity → plant mask)
+
+Same idea as the classifier stage: embed a reference leaf region, score every patch in a field image, threshold, and overlay a mask.
+
+![Original vs masked overlay](docs/images/region_original_vs_masked.jpg)
+
+![Zoomed original vs masked plants](docs/images/region_masked_zoom.jpg)
+
+![Similarity heatmap (score > 0.4)](docs/images/region_similarity_heatmap.jpg)
+
 ---
 
 ##  Key Features
